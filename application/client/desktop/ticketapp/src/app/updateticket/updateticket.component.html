@@ -1,0 +1,43 @@
+<h2 class="screen-align">Updateticket</h2>
+<div id="template-i7zp" class="row">
+    <div id="template-iq7j" class="cell">
+        <label id="template-is6h" class="label">Name</label>
+        <input id="template-i5hc4" [(ngModel)]="ticket.name" [ngModelOptions]="{standalone: true}"
+        class="input form-control" />
+    </div>
+    <div id="template-ilrn" class="cell">
+        <label id="template-i2x3y" class="label">Description</label>
+        <input id="template-ioe5g" [(ngModel)]="ticket.description"
+        [ngModelOptions]="{standalone: true}" class="input form-control" />
+    </div>
+    <div id="template-iccj" class="cell">
+        <label id="template-it90e" class="label">Service Types</label>
+        <div id="template-ist7r" class="">
+            <ng-select id="template-i06mb" name="dynamicdropdown_template-i06mb" [searchable]="true"
+            [virtualScroll]="true" [items]="servicetypesitemArray" bindLabel="name"
+            bindValue="name" [(ngModel)]="ticket.service_types" [ngModelOptions]="{standalone: true}"
+            class="form-control"></ng-select>
+        </div>
+    </div>
+</div>
+<div id="template-irao" class="row">
+    <div id="template-inhz" class="cell">
+        <label id="template-ijtaw" class="label">Severity</label>
+        <div id="template-idhjf" class="">
+            <ng-select id="template-iskg9" name="dynamicdropdown_template-iskg9" [searchable]="true"
+            [virtualScroll]="true" [items]="severityitemArray" bindLabel="name" bindValue="name"
+            [(ngModel)]="ticket.severity" [ngModelOptions]="{standalone: true}" class="form-control"></ng-select>
+        </div>
+        <button id="template-ieqnq" (click)="GpUpdate()" class="button btn btn-primary">Update</button>
+        <button id="template-idqoh" (click)="GpDelete()" class="button btn btn-primary">Delete</button>
+    </div>
+    <div id="template-i6xq" class="cell">
+        <label id="template-ibti9" class="label">Assignee</label>
+        <div id="template-irpws" class="">
+            <ng-select id="template-i2zaf" name="dynamicdropdown_template-i2zaf" [searchable]="true"
+            [virtualScroll]="true" [items]="assigneesitemArray" bindLabel="name" bindValue="name"
+            [(ngModel)]="ticket.assignee" [ngModelOptions]="{standalone: true}" class="form-control"></ng-select>
+        </div>
+    </div>
+    <div id="template-i9fz" class="cell"></div>
+</div>
